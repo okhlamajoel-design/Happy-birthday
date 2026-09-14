@@ -1,0 +1,535 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --burgundy: #800020;
+    --burgundy-soft: #9b3e51;
+    --cream: #fff6ee;
+    --pink: #e7b7bf;
+    --gold: #c9a66b;
+    --text: #5a2630;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #eeeeee;
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+main {
+    width: min(100%, 430px);
+    margin: auto;
+    background: var(--cream);
+}
+
+
+/* =========================
+   GENERAL SCREEN
+========================= */
+
+.screen {
+    min-height: 100vh;
+    padding: 45px 28px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background: var(--burgundy);
+    color: var(--cream);
+}
+
+.eyebrow,
+.small-title {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: .75;
+}
+
+.hero h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: .9;
+    margin-top: 20px;
+}
+
+.script {
+    font-family: "Parisienne", cursive;
+    font-size: 42px;
+}
+
+.flower {
+    font-size: 65px;
+    margin: 25px 0;
+}
+
+.main-button {
+    border: 1px solid var(--burgundy);
+    background: transparent;
+    color: var(--burgundy);
+
+    padding: 13px 23px;
+    border-radius: 999px;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.hero .main-button,
+.letter-section .main-button,
+.final .main-button {
+    border-color: var(--cream);
+    color: var(--cream);
+}
+
+.main-button:hover {
+    transform: translateY(-3px);
+}
+
+.scroll-text {
+    font-size: 10px !important;
+    opacity: .5;
+    margin-top: 20px;
+}
+
+.floating-hearts span {
+    position: absolute;
+    color: var(--pink);
+    animation: float 4s infinite ease-in-out;
+}
+
+.floating-hearts span:nth-child(1) {
+    left: 15%;
+    top: 20%;
+}
+
+.floating-hearts span:nth-child(2) {
+    right: 15%;
+    top: 35%;
+}
+
+.floating-hearts span:nth-child(3) {
+    left: 25%;
+    bottom: 20%;
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(-15px) rotate(10deg);
+    }
+}
+
+
+/* =========================
+   BIRTHDAY
+========================= */
+
+.birthday {
+    background: var(--cream);
+    padding-bottom: 80px;
+}
+
+.section-number {
+    position: absolute;
+    top: 30px;
+    right: 28px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+    opacity: .45;
+}
+
+.photo-card {
+    width: 76%;
+    padding: 9px 9px 27px;
+    background: white;
+
+    box-shadow: 0 15px 30px #4a00151a;
+
+    margin: 25px 0;
+}
+
+.rotate-left {
+    transform: rotate(-2deg);
+}
+
+.photo-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1.12;
+    object-fit: cover;
+}
+
+.photo-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1.12;
+
+    background: #f0ddd8;
+
+    display: grid;
+    place-items: center;
+
+    color: #9b6c72;
+    font-size: 11px;
+}
+
+.photo-card img + .photo-placeholder {
+    display: none;
+}
+
+.birthday h2,
+.memories h2,
+.letter-section h2,
+.final h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 39px;
+    line-height: .95;
+}
+
+h2 span {
+    color: var(--burgundy-soft);
+}
+
+.description {
+    max-width: 320px;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+    background: var(--burgundy);
+    color: var(--cream);
+}
+
+.big-script {
+    font-size: 59px;
+    line-height: 1;
+    margin: 30px 0;
+}
+
+.line {
+    width: 60px;
+    height: 1px;
+    background: var(--pink);
+    margin-bottom: 25px;
+}
+
+.message .description {
+    color: var(--cream);
+    opacity: .9;
+}
+
+.heart {
+    color: var(--pink);
+    font-size: 30px;
+    margin-top: 25px;
+}
+
+
+/* =========================
+   MEMORIES
+========================= */
+
+.memories {
+    background: var(--cream);
+    justify-content: flex-start;
+    padding-top: 70px;
+}
+
+.memories h2 {
+    align-self: flex-start;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.memory-container {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.memory-card {
+    background: white;
+    width: 50%;
+    padding: 8px 8px 18px;
+
+    box-shadow: 0 8px 25px #4a001514;
+}
+
+.memory-one {
+    transform: none;
+}
+
+.memory-two {
+    transform: none;
+    margin-top: 0;
+}
+
+.memory-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1.15;
+    object-fit: cover;
+}
+
+.memory-placeholder {
+    aspect-ratio: 1 / 1.15;
+    display: grid;
+    place-items: center;
+
+    background: #f0ddd8;
+    color: #9b6c72;
+
+    font-size: 10px;
+}
+
+.memory-card img + .memory-placeholder {
+    display: none;
+}
+
+.memory-card p {
+    font-family: "Parisienne", cursive;
+    font-size: 19px;
+    margin-top: 9px;
+}
+
+.memory-note {
+    margin-top: 35px;
+    font-family: "Parisienne", cursive;
+    font-size: 24px;
+}
+
+
+/* =========================
+   LETTER SECTION
+========================= */
+
+.letter-section {
+    background: var(--burgundy);
+    color: var(--cream);
+}
+
+.letter-section h2 {
+    margin: 15px 0 30px;
+}
+
+
+/* ENVELOPE */
+
+.envelope {
+    width: 250px;
+    height: 165px;
+    position: relative;
+
+    cursor: pointer;
+
+    margin-bottom: 28px;
+
+    filter: drop-shadow(0 15px 20px #0003);
+
+    transition: .4s;
+}
+
+.envelope:hover {
+    transform: translateY(-5px);
+}
+
+.envelope-body {
+    position: absolute;
+    inset: 0;
+
+    background: #dcaeb5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.envelope-top {
+    position: absolute;
+    z-index: 3;
+
+    width: 0;
+    height: 0;
+
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    border-top: 85px solid #e8c2c6;
+}
+
+.envelope-text {
+    font-family: "Parisienne", cursive;
+    font-size: 31px;
+    margin-top: 45px;
+}
+
+.seal {
+    position: absolute;
+    z-index: 4;
+
+    bottom: 40%;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+
+    background: var(--burgundy);
+    color: white;
+
+    display: grid;
+    place-items: center;
+}
+
+
+/* =========================
+   LETTER POPUP
+========================= */
+
+.letter-popup {
+    position: fixed;
+    z-index: 100;
+
+    inset: 0;
+
+    background: #35000acc;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: .35s;
+}
+
+.letter-popup.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.letter-paper {
+    width: min(90%, 390px);
+    max-height: 82svh;
+
+    overflow-y: auto;
+
+    background: var(--cream);
+    color: var(--text);
+
+    padding: 40px 27px;
+
+    position: relative;
+
+    box-shadow: 0 25px 80px #0006;
+
+    transform: scale(.8);
+
+    transition: .35s;
+}
+
+.letter-popup.open .letter-paper {
+    transform: scale(1);
+}
+
+.close-button {
+    position: absolute;
+
+    right: 13px;
+    top: 8px;
+
+    border: none;
+    background: transparent;
+
+    font-size: 27px;
+    color: var(--burgundy);
+
+    cursor: pointer;
+}
+
+.letter-title {
+    margin-bottom: 20px;
+}
+
+.letter-paper p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.signature {
+    font-family: "Parisienne", cursive;
+    font-size: 28px !important;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+    background: var(--cream);
+}
+
+.final-hearts {
+    color: var(--burgundy);
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.final-flower {
+    font-size: 65px;
+    margin: 30px 0 15px;
+}
+
+.final .signature {
+    color: var(--burgundy);
+    font-family: "Parisienne", cursive;
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 600px) {
+
+    main {
+        margin: 25px auto;
+        border-radius: 25px;
+    }
+
+}
